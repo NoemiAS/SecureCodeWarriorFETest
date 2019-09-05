@@ -1,0 +1,14 @@
+<div class="content">
+  <h1 class="language-title">Available Languages and Frameworks</h1>
+  <p>Pick your preferred coding language and framework</p>
+  <input class="search-input" type="search" name="search" [(ngModel)]="searchText" autocomplete="off"
+    placeholder="Search for a language by name">
+  <div class="language-list">
+    <div class="language-item" *ngFor="let l of languages | filter: searchText">
+      <span class="active-indicator">ACTIVE</span>
+      <img src="assets/{{l.logo}}" />
+      <h2>{{l.name}}</h2>
+      <p>{{l.description}}</p>
+    </div>
+  </div>
+</div>
